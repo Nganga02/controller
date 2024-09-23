@@ -21,20 +21,22 @@ class ControllerNode(Node):
         self.gear = 0
         self.acc_flag = 0
         self.dec_flag = 0
+        self.vel = 0
 
     #Publishing the message
     def publish(self):
         msg = Twist()
         acc = self.remapping()[0]
         dec = self.remapping()[1]
-        vel = self.vel_compute(acc=acc, dec=dec, velocity=0.0)
-        msg.linear.x = vel #we shall print the value of velcity after conversion 
+        self.vel = self.vel_compute(acc=acc, dec=dec, velocity=self.vel)
+        msg.linear.x = self.vel #we shall print the value of velcity after conversion 
         msg.linear.y = float(0.0)
         msg.linear.z = float(0.0)
         msg.angular.z = self.remapping()[2]
         msg.angular.y = float(0.0)
         msg.angular.x = float(0.0)
         self.publisher_.publish(msg)
+
 
     def subscribe(self, joy):
         trimmed_list = joy.axes[2:6]
