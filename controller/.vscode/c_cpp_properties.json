@@ -1,0 +1,27 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/kamau/Documents/hiwonder/install/xarm_planner/include/**",
+        "/home/kamau/Documents/hiwonder/install/xarm_gazebo/include/**",
+        "/home/kamau/Documents/hiwonder/install/xarm_controller/include/**",
+        "/home/kamau/Documents/hiwonder/install/xarm_api/include/**",
+        "/home/kamau/Documents/hiwonder/install/xarm_msgs/include/**",
+        "/home/kamau/Documents/hiwonder/install/realsense_gazebo_plugin/include/**",
+        "/opt/ros/humble/include/**",
+        "/home/kamau/SLAM_WS/src/cpp_pkg/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
