@@ -87,9 +87,9 @@ class ControllerNode(Node):
         self.get_logger().info(f"{self.controls}")
 
     def remapping(self):
-        acc = self.remap(-0.05, self.controls['L2'], 0.05)
+        acc = self.remap(-0.025, self.controls['L2'], 0.025)
         self.get_logger().info(f" ACC: {acc}")
-        dec = self.remap(-0.075, self.controls['R2'], 0.075)
+        dec = self.remap(-0.05, self.controls['R2'], 0.05)
         self.get_logger().info(f"DEC: {dec}")
         dir = self.remap(2, self.controls['Left'], 0)
         self.get_logger().info(f"DIR: {dir}")
